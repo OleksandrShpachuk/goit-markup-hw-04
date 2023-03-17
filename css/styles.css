@@ -5,10 +5,7 @@
   --pressed-state-color: #404bbf;
   --primary-accent-color: #e7e9fc;
   --primary-bg-color: #f4f4fd;
-  --grad-fon: linear-gradient(
-    rgba(46, 47, 66, 0.7),
-    rgba(46, 47, 66, 0.7)
-  );
+  --grad-fon: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
 }
 
 body {
@@ -168,8 +165,7 @@ body {
   height: 600px;
   margin-left: auto;
   margin-right: auto;
-  background-image: var(--grad-fon),
-    url(../images/people-office-1.jpg);
+  background-image: var(--grad-fon), url(../images/people-office-1.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -360,12 +356,40 @@ body {
   letter-spacing: 0.02em;
 
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 8px;
 
   color: #434455;
 }
 
+
 /*======== Section OUR TEAM ========*/
+
+/* ======== Section CUSTOMERS====== */
+
+.customer {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.customer-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  text-align: center;
+
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 72px;
+
+  color: #2e2f42;
+}
+
+
+
+/* ======== Section CUSTOMERS====== */
 
 /*=========== Footer ============== */
 
