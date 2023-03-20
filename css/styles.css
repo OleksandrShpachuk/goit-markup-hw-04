@@ -361,6 +361,29 @@ body {
   color: #434455;
 }
 
+/* ------icon list-------- */
+
+.team-icon-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.team-icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-brand-color);
+}
+
+.link-icon {
+  fill: var(--primary-bg-color);
+}
+
+/* ------icon list---------- */
 
 /*======== Section OUR TEAM ========*/
 
@@ -387,8 +410,6 @@ body {
   color: #2e2f42;
 }
 
-
-
 /* ======== Section CUSTOMERS====== */
 
 .customer-list {
@@ -402,7 +423,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #8E8F99;
+  border: 1px solid #8e8f99;
   border-radius: 4px;
 }
 
@@ -410,8 +431,6 @@ body {
   width: 168px;
   height: 88px;
 }
-
-
 
 /*=========== Footer ============== */
 
@@ -455,24 +474,36 @@ body {
   margin-bottom: 0;
 }
 
-.wrap2 {
-}
-
 .social-text {
-font-family: 'Roboto', sans-serif;
-font-weight: 500;
-font-size: 16px;
-line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
 
-letter-spacing: 0.02em;
-color: #FFFFFF;
+  letter-spacing: 0.02em;
+  color: #ffffff;
 
-margin-bottom: 16px;
-margin-top: 0;
+  margin-bottom: 16px;
+  margin-top: 0;
 }
 
 .wrap2-social-list {
   display: flex;
+  gap: 16px;
+}
+
+.wrap2-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #434455;
+}
+
+.wrap2-icon {
+  fill: var(--primary-bg-color);
 }
 
 /*=========== Footer ============== */
@@ -560,6 +591,12 @@ margin-top: 0;
   border-left: 1px solid #e7e9fc;
   border-right: 1px solid #e7e9fc;
   border-bottom: 1px solid #e7e9fc;
+}
+
+.item-hover:hover,
+.worl-hover:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .works-item-title {
