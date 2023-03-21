@@ -208,6 +208,11 @@ body {
   background-color: var(--primary-brand-color);
 }
 
+.hero-button:hover,
+.hero-button:focus {
+  background-color: var(--pressed-state-color);
+}
+
 /* ==== Section ADVANTAGES ==== */
 
 .advantages {
@@ -379,6 +384,11 @@ body {
   background-color: var(--primary-brand-color);
 }
 
+.team-icon-link:hover,
+.team-icon-link:focus {
+  background-color: var(--pressed-state-color);
+}
+
 .link-icon {
   fill: var(--primary-bg-color);
 }
@@ -410,8 +420,6 @@ body {
   color: #2e2f42;
 }
 
-/* ======== Section CUSTOMERS====== */
-
 .customer-list {
   display: flex;
   justify-content: center;
@@ -427,10 +435,26 @@ body {
   border-radius: 4px;
 }
 
+.customer-list-item:hover,
+.customer-list-item:focus {
+  border: 1px solid var(--pressed-state-color);
+}
+
 .customer-link {
   width: 168px;
   height: 88px;
 }
+
+.customer-icon {
+  fill: #8e8f99;
+}
+
+.customer-icon:hover,
+.customer-icon:focus {
+  fill: var(--pressed-state-color)
+}
+
+/* ======== Section CUSTOMERS====== */
 
 /*=========== Footer ============== */
 
@@ -502,8 +526,13 @@ body {
   background-color: #434455;
 }
 
-.wrap2-icon {
-  fill: var(--primary-bg-color);
+.wrap2-social-link:hover,
+.wrap2-social-link:focus {
+  background-color: var(--pressed-state-color);
+}
+
+.wrap2-social-link:active {
+  background-color: #31D0AA;
 }
 
 /*=========== Footer ============== */
@@ -554,7 +583,7 @@ body {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 
   color: #e7e9fc;
-  background-color: var(--primary-brand-color);
+  background-color: var(--pressed-state-color);
 }
 
 /*======== Filter ======== */
