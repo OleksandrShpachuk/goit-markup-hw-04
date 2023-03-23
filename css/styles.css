@@ -6,6 +6,7 @@
   --primary-accent-color: #e7e9fc;
   --primary-bg-color: #f4f4fd;
   --grad-fon: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -117,6 +118,7 @@ body {
   letter-spacing: 0.02em;
 
   color: var(--title-text-color);
+  transition: color var(--transition);
 }
 
 .menu-link:hover,
@@ -146,6 +148,7 @@ body {
   letter-spacing: 0.02em;
 
   color: var(--text-color);
+  transition: color var(--transition);
 }
 
 .address-link:hover,
@@ -203,6 +206,7 @@ body {
 
   border: none;
   border-radius: 4px;
+  transition: background-color var(--transition);
 
   color: #ffffff;
   background-color: var(--primary-brand-color);
@@ -381,6 +385,7 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  transition: background-color var(--transition);
   background-color: var(--primary-brand-color);
 }
 
@@ -433,6 +438,7 @@ body {
   justify-content: center;
   border: 1px solid #8e8f99;
   border-radius: 4px;
+  transition: border var(--transition);
 }
 
 .customer-list-item:hover,
@@ -446,12 +452,13 @@ body {
 }
 
 .customer-icon {
+  transition: fill var(--transition);
   fill: #8e8f99;
 }
 
 .customer-icon:hover,
 .customer-icon:focus {
-  fill: var(--pressed-state-color)
+  fill: var(--pressed-state-color);
 }
 
 /* ======== Section CUSTOMERS====== */
@@ -523,6 +530,7 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  transition: background-color var(--transition);
   background-color: var(--primary-brand-color);
 }
 
@@ -532,11 +540,74 @@ body {
 
 .wrap2-social-link:hover,
 .wrap2-social-link:focus {
-  background-color: #31D0AA;
+  background-color: #31d0aa;
 }
 
-
 /*=========== Footer ============== */
+/* ======== Modal Window=========== */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity var(--transition);
+
+  background-color: rgba(46, 47, 66, 0.4);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 408px;
+  min-height: 516px;
+
+  background-color: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.modal-close-button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color var(--transition);
+
+  background-color: var(--primary-accent-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.modal-close-button:hover,
+.modal-close-button:focus {
+  background-color: var(--pressed-state-color);
+}
+
+.modal-close-icon {
+  transition: fill var(--transition);
+}
+
+.modal-close-button:hover .modal-close-icon,
+.modal-close-button:focus .modal-close-icon {
+  fill: #ffffff;
+}
 
 /* -------PORTFOLIO PAGE--------- */
 
@@ -576,6 +647,8 @@ body {
   border-radius: 4px;
 
   color: var(--primary-brand-color);
+  transition: color var(--transition), background-color var(--transition),
+    box-shadow var(--transition);
 }
 
 .filter-button:hover,
@@ -623,8 +696,12 @@ body {
   border-bottom: 1px solid #e7e9fc;
 }
 
+.item-hover {
+  transition: box-shadow var(--transition);
+}
+
 .item-hover:hover,
-.worl-hover:focus {
+.item-hover:focus {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -654,5 +731,39 @@ body {
 
   color: #434455;
 }
+/* ------Overlay------------ */
+.overlay-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  overflow: auto;
+  transform: translate(0, 100%);
+  transition: transform 500ms linear;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+
+  color: var(--primary-bg-color);
+  background-color: var(--primary-brand-color);
+
+  padding-top: 40px;
+  padding-left: 32px;
+  padding-right: 32px;
+  margin: 0;
+}
+
+.item-link:hover .overlay,
+.item-link:focus .overlay {
+  transform: translate(0, 0);
+}
+
+/* ------Overlay------------ */
 
 /*========= Works list ======== */
